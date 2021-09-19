@@ -30,5 +30,15 @@ namespace Bakery.Tests
       int totalLoaves = loafOrder;
       Assert.AreEqual(loafOrder, totalLoaves);
     }
+
+     [TestMethod]
+     public void TotalLoafPrice_ReturnsProductOfLoafPriceAndLoafOrder_Int()
+     {
+       int loafOrder = 1;
+       int totalLoafPriceTest = 5;
+       Bread newBread = new Bread (loafOrder);
+       int totalLoafPrice = newBread.LoafCost();
+       Assert.AreEqual(totalLoafPriceTest, totalLoafPrice);
+     }
   }
 }
