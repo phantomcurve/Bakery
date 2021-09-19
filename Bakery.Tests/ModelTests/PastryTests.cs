@@ -41,5 +41,15 @@ namespace Bakery.Tests
       int totalPastryCost = newPastry.PastryCost();
       Assert.AreEqual(totalPastryCost, pastryPriceTest);
     }
-  }
+
+    [TestMethod]
+    public void TotalPastryPrice_ReturnsPromoPricingUponQuantityQualifiers_Int()
+    {
+      int pastryOrder = 3;
+      int pastryPriceTest = 5;
+      Pastry newPastry = new Pastry(pastryOrder);
+      int totalPastryCost = newPastry.PastryCost();
+      Assert.AreEqual(pastryPriceTest, totalPastryCost);
+    }
+  } 
 }
