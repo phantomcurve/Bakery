@@ -34,7 +34,7 @@ This console app demonstrates the power of the C# namespace to separate logic to
 
 ## Contact
 
-* Tim Roth <mailto: timdroth@gmail.com>
+* Tim Roth <mailto:timdroth@gmail.com>
 
 ## Licensing
 
