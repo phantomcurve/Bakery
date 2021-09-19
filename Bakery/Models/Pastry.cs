@@ -1,25 +1,33 @@
-//using System;
-//using System.Collections.Generic;
+using System;
+using Bakery.Models;
 
-// namespace Bakery.Models
-// {
-//   public class Pastry
-//   {
-//     public string Description { get; set; }
-//     private static List<Pastry> _instances = new List<Pastry> {};
-//     public Pastry(string description)
-//     {
-//       Description = description;
-//       _instances.Add(this);
-//     }
-//     public static List<Pastry> GetAll()
-//     {
-//       return _instances;
-//     }
-//     public static void ClearAll()
-//     {
-//       _instances.Clear();
-//     }
-//   }
-// }
+namespace Bakery.Models
+{
+  public class Pastry
+  {
+    public int PastryPrice { get; set; } = 2;
+    public int PastryOrder { get; set; }
+    public Pastry(int pastryOrder)
+    {
+      PastryOrder = pastryOrder;
+    }
+    public int PastryCost()
+    {
+     if (PastryOrder % 3 == 0)
+      {
+        int totalPastryPrice = (PastryOrder / 3) * 5;
+        return totalPastryPrice;
+      }
+      else if (PastryOrder % 3 > 0 && PastryOrder >3)
+      {
+        int totalPastryPrice = ((PastryOrder / 3) *5) + ((PastryOrder % 3) * PastryPrice);
+        return totalPastryPrice;
+      }
+      else
+      {
+      return PastryPrice * PastryOrder;
+      }
+    }
+  } 
+}
       

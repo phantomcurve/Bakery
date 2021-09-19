@@ -1,26 +1,21 @@
 using System; 
+using Bakery.Models;
 
 namespace Bakery.Models
 {
   public class Bread
   {
+    public int LoafPrice { get; set; }  = 5;  
     public int LoafOrder { get; set; }
     public Bread(int loafOrder)
     {
       LoafOrder = loafOrder;
     }
-    public int[] LoafCost()
+    public int LoafCost()
     {
-      int loafOrder = LoafOrder;
-      int loafMath = LoafOrder % 3;
-      int loafPrice = (loafOrder -(loafOrder/3))*5;
-      int newLoafPrice = loafOrder;
-      if (loafMath == 2)
-      {
-        newLoafPrice += 1;
-      }
-      int[] result = {newLoafPrice,loafPrice};
-      return result;
+      int loafPromo = LoafPrice * ((LoafOrder - (LoafOrder % 3)) / 3);
+      int totalLoafCost = (LoafOrder * LoafPrice) - loafPromo;
+      return totalLoafCost;
     }
   }
 }
