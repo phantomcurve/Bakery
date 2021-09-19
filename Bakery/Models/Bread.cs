@@ -1,27 +1,26 @@
-//using System; 
-//using System.Collections.Generic;
+using System; 
 
-// namespace Bakery.Models
-// {
-//   public class Bread
-//   {
-//     static void Main()
-//     {
-//     public string Description { get; set; }
-//     private static List<Bread> _instances = new List<Bread> {};
-//     public Bread(string description)
-//     {
-//       Description = description;
-//       _instances.Add(this);
-//     }
-//     public static List<Bread> GetAll()
-//     {
-//       return _instances;
-//     }
-//     public static void ClearAll()
-//     {
-//       _instances.Clear();
-//     }
-    
-//   }
-// }
+namespace Bakery.Models
+{
+  public class Bread
+  {
+    public int LoafOrder { get; set; }
+    public Bread(int loafOrder)
+    {
+      LoafOrder = loafOrder;
+    }
+    public int[] LoafCost()
+    {
+      int loafOrder = LoafOrder;
+      int loafMath = LoafOrder % 3;
+      int loafPrice = (loafOrder -(loafOrder/3))*5;
+      int newLoafPrice = loafOrder;
+      if (loafMath == 2)
+      {
+        newLoafPrice += 1;
+      }
+      int[] result = {newLoafPrice,loafPrice};
+      return result;
+    }
+  }
+}

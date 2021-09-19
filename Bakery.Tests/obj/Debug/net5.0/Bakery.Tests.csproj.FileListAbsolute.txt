@@ -1,0 +1,5 @@
+/Users/phantom/Desktop/Bakery.Solution/Bakery.Tests/obj/Debug/net5.0/Bakery.Tests.csprojAssemblyReference.cache
+/Users/phantom/Desktop/Bakery.Solution/Bakery.Tests/obj/Debug/net5.0/Bakery.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/phantom/Desktop/Bakery.Solution/Bakery.Tests/obj/Debug/net5.0/Bakery.Tests.AssemblyInfoInputs.cache
+/Users/phantom/Desktop/Bakery.Solution/Bakery.Tests/obj/Debug/net5.0/Bakery.Tests.AssemblyInfo.cs
+/Users/phantom/Desktop/Bakery.Solution/Bakery.Tests/obj/Debug/net5.0/Bakery.Tests.csproj.CoreCompileInputs.cache
