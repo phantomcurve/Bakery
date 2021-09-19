@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Bakery;
+using Bakery.Models;
 
 namespace Bakery.Tests
 {
@@ -7,6 +7,12 @@ namespace Bakery.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void 
+    public void LoafConstructor_CreatesInstanceOfLoaf_Bread()
+    {
+      Bread newLoaf = new Bread(5);
+      Assert.AreEqual(typeof(Bread), newLoaf.GetType());
+    }
+
+    []
   }
 }
